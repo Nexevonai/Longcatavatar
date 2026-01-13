@@ -33,6 +33,7 @@ COPY r2_client.py /app/r2_client.py
 # Environment variables
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
+ENV TORCH_COMPILE_DISABLE=1
 
 # Entry point - runs the serverless handler
 CMD ["python", "-u", "handler.py"]
