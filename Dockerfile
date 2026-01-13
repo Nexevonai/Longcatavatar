@@ -19,8 +19,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt requirements_avatar.txt ./
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir -r requirements_avatar.txt
+RUN pip install --no-cache-dir --ignore-installed -r requirements.txt
+RUN pip install --no-cache-dir --ignore-installed -r requirements_avatar.txt
 
 # Install RunPod SDK and R2 client dependencies
 RUN pip install --no-cache-dir runpod boto3
